@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <script src="assets/script.js"></script>
+    <title>bonus 1</title>
+  </head>
+  <body ng-app>
+    <form name="formNewMail">
+      <label>Adresse E-mail : </label><input type="email" name="email" ng-model="email" required />
+    </form>
+    <!-- permet de vérifier si l e-mail est valide ou non par l affichage de div rouge ou verte. utiliser le name de la
+     balise form ainsi que le name de l imput suive de $valid ou $error.email -->
+    <div ng-show="formNewMail.email.$valid" style="background-color:green; width:20px; height:20px; "></div>
+    <div ng-show="formNewMail.email.$error.email" style="background-color:red; width:20px; height:20px; "></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+  </body>
+</html>
